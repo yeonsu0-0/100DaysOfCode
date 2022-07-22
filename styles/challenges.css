@@ -1,0 +1,75 @@
+header {
+    margin-bottom: 64px;
+}
+
+h1 {
+    font-size: 48px;
+    color: rgb(71,62, 62);
+    margin: 24px 0;
+}
+
+아이디 선택자 
+#description {
+    margin: 12px 0;
+}
+
+
+a {
+    background-color: rgb(167, 1, 78);
+    color: aliceblue;
+    border-radius: 4px;
+    font-size: 24px;
+    padding: 12px 48px;
+
+    /* 선의 굵기, 선의 유형, 선의 색상 */
+    border: 1px solid rgb(79, 0, 37);
+
+    display: inline-block;
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: rgb(180, 12, 90);
+}
+
+ol {
+    list-style: none;
+    width: 500px;
+    /* 요소를 가운데 정렬하는 방법: auto (브라우저가 왼쪽과 오른쪽에 같은 크기의 여백을 추가함) */
+    margin: 36px auto 0 auto;
+    padding: 0;
+}
+
+li {
+    background-color: rgb(223, 136, 124);
+    border-radius: 6px;
+    margin: 32px;
+    padding: 16px;
+    box-shadow: 1px 2px 3px #c4c4c4;
+}
+
+h2 {
+    color: rgb(78, 13, 5);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main p {
+    margin: 12px;
+    color:rgb(66, 66, 66);
+}
+
+.daily-goal {
+    margin: 12px;
+    color:rgb(66, 66, 66);
+}
+
+.highlight-goal {
+    background-color: rgb(224, 101, 85);
+    border: 1px dashed rgb(109, 28, 28);
+}
+
+.dayOff {
+    background-color: #fff5da;
+    border: 1px dashed rgb(109, 28, 28);
+}

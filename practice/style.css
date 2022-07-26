@@ -42,18 +42,13 @@ h3{
 
 .subTitle{
     color: rgb(246, 255, 151);
+    border-left: 5px solid rgb(227, 197, 0);
+
 }
 
-/*
-.bar{
-    display: inline-block;
-    width: 2px;
-    height: 8px;
-    background-color: #fff;
-}
-*/
 p{
     color: white;
+    padding-left: 10px;
 }
 
 p span{

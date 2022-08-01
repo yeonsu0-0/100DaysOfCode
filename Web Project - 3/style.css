@@ -63,6 +63,7 @@
 #highlights {
     margin: 0 auto;
     margin-bottom: 96px;
+    padding: 0;
 }
 
 #HIGHLIGHTS {
@@ -102,41 +103,3 @@ width: 300px;
 }
 
 
-/* ================================================== */
-/* ===================== footer ===================== */
-
-footer {
-    background-color: black;
-    padding-bottom: 28px;
-    position: relative;
-}
-
-footer .footer{
-    padding: 32px 32px 0 32px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer #page-logo a {
-    color: white;
-    margin-left: 120px;
-    font-size: 24px;
-}
-
-.footer ul {
-    display: flex;
-    margin-right: 130px;
-}
-
-.footer img {
-    height: 32px;
-    margin-left: 24px;
-}
-
-footer p {
-    margin: 0;
-    color: rgb(148, 148, 148);
-    left: 320px;
-    position: absolute;
-    top: 42px;
-}

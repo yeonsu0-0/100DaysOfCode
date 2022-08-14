@@ -9,6 +9,7 @@ header {
     justify-content: space-between;
     height: 2.5rem;
     background-color: #b1ffb1;
+    align-items: center;
     
 }
 
@@ -20,6 +21,26 @@ header {
     font-weight: 900;
     color: #FF7043;
     cursor: pointer;
+}
+
+
+/* *************************************************************** */
+/* ham menu */
+
+.menu-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    display: none;
+}
+
+.menu-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
 }
 
 header ul {
@@ -38,6 +59,59 @@ header ul li {
 header ul li:hover {
     color: #ff7043;
     cursor: pointer;
+}
+
+/* *************************************************************** */
+/* drawer */
+
+#side-drawer {
+    width: 100%;
+    height: 100%;
+    background-color: #1f0665;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#side-drawer:target {
+    display: block;
+}
+
+#side-drawer header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 5.5rem;
+    justify-content: flex-end;
+    height: 2.5rem;
+    background-color: #b1ffb1;
+    
+}
+
+
+#side-drawer nav ul {
+    font-size: 2.5rem;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#side-drawer ul li {
+    margin-top: 3rem;
+}
+
+#side-drawer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#side-drawer ul li a:hover {
+    color: #FF7043;
 }
 
 main {
@@ -104,4 +178,29 @@ main h3 {
     background-color: #ff7043;
     color: white;
     text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .foodBox {
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+
+    main h1 {
+        font-size: 2.3rem;
+    }
+
+    main h3 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
 }

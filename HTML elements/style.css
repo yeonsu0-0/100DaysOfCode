@@ -1,17 +1,54 @@
 body {
-    background-color: rgb(88, 88, 88);
-    margin: 8rem;
+    background-color: #363472;  
+    font-family: 'Noto Sans KR', 'Roboto';
+    letter-spacing: -0.5px;
+}
+
+form {
+    width: 30rem;
+    margin: 3rem auto;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 6px;
+}
+
+label{
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 20px;
 }
 
 input {
-    width: 10rem;
-    height: 2rem;
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border: 1px solid #363472; 
+    padding: 0.5rem;
+    color: rgb(80, 80, 80);
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+input:focus {
+background-color: #f2f2fd;  
+color: #363472;  
 }
 
 button {
-    width: 10.5rem;
-    height: 1.9rem;
     display: block;
-    margin-top: 0.5rem;
 
+    /* inherit: 브라우저 디폴트 값을 상속받는 값으로 변경할 수 있다 */
+    font: inherit;
+
+    background-color: #363472; 
+    color: white;
+    border: 1px solid #363472; 
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #403d84; 
 }

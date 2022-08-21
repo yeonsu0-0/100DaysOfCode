@@ -4,6 +4,14 @@ body {
     letter-spacing: -0.5px;
 }
 
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
 form {
     width: 30rem;
     margin: 3rem auto;
@@ -18,7 +26,8 @@ label{
     font-size: 20px;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     display: block;
     margin: 1rem 0;
@@ -30,7 +39,8 @@ input {
     border-radius: 6px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
 background-color: #f2f2fd;  
 color: #363472;  
 }

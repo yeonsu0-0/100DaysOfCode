@@ -9,15 +9,98 @@
     <title>HTML Forms</title>
 </head>
 <body>
-    <form action="/" method="GET">
+    <header>
+        <h1>various form tags</h1>
+    </header>
+    <main>
+        <form action="/" method="GET">
+            <section>
+                <h2>개인정보 입력</h2>
+                <ul>
+                    <li>
+                        <!-- 이름 -->
+                        <label for="useraame">이름을 입력하세요</label>
+                        <input type="text" name="user-name" id="username" />
+                    </li>
+                </ul>
+                    <li>
+                        <!-- 이메일 -->
+                        <label for="useremail">이메일을 입력하세요</label>
+                        <input type="email" name="user-email" id="useremail" />
+                    </li>
+                    <li>
+                <!-- 비밀번호 -->
+                        <label for="userpassword">비밀번호를 입력하세요</label>
+                        <input type="password" name="user-password" id="userpassword" />
+                    </li>
+            </section>
 
-        <!-- 웹 접근성을 위해 label에 for 속성을 넣고 id를 적어준다 -->
-        <label for="userName">이름을 입력하세요</label>
+            <!-- =============================================================== -->
+            <section>
+                <h2>추가정보 입력</h2>
+                <ul>
+                    <li>
+                        <!-- 나이 -->
+                        <label for="userage">나이를 입력하세요</label>
+                        <input type="number" name="user-age" id="userage" />
+                    </li>
+                    <li>
+                        <!-- 생년월일 -->
+                        <label for="birthdate">생년월일을 입력하세요</label>
+                        <input type="date" name="birthdate" id="user-birthdate" />
+                    </li>
+                    <li>
+                        <!-- MBTI -->
+                        <label for="mbti">MBTI를 선택하세요</label>
+                        <!-- select / option - value -->
+                        <select name="mbti" id="user-mbti">
+                            <option value="INTJ">INTJ</option>
+                            <option value="ISTJ">ISTJ</option>
+                            <option value="ESTJ">ESTJ</option>
+                            <option value="ENTJ">ENTJ</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
 
-        <!-- input element는 closing tag가 필요 없는 void element이다 -->
-        <input type="text" name="user-name" id="userName" />
+            <!-- =============================================================== -->
+            <section>
+                <label for="usermessage">자유롭게 의견을 남겨주세요</label>
+                <textarea name="usermessage" id="user-message" cols="30" rows="10"></textarea>
+            </section>
 
-        <button>제출하기</button>
-    </form>
+            <!-- =============================================================== -->
+            <section>
+                <h2>본인인증 방식을 선택하세요</h2>
+                <ul>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="verify-text-message" value="text-message" />
+                        <label for="verify-text-message">메세지(SMS)</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="verify-email" value="email" />
+                        <label for="verify-email">이메일</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="verify-call" value="call" />
+                        <label for="verify-call">전화(ARS)</label>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <div class="form-control-inline">
+                    <input type="checkbox" name="terms" id="agree-terms" />
+                    <label for="agree-terms">개인정보 수집에 동의하십니까?</label>
+                </div>
+            </section>
+
+            <section>
+                <button>제출하기</button>
+            </section>
+
+        </form>
+    </main>
+
 </body>
 </html>

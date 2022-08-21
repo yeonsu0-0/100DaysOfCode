@@ -12,22 +12,35 @@ li {
     list-style-type: none;
 }
 
+header h1 {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    margin-top: 4rem;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 1.5rem;
+}
+
 form {
     width: 30rem;
-    margin: 3rem auto;
+    margin: 2rem auto;
     background-color: #fff;
     padding: 2rem 3rem;
     border-radius: 6px;
 }
 
 label{
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     display: block;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 input,
-textarea {
+textarea,
+select {
     width: 100%;
     display: block;
     margin: 1rem 0;
@@ -61,4 +74,21 @@ button {
 
 button:hover {
     background-color: #403d84; 
+}
+
+.form-control-inline {
+    display: flex;
+}
+
+.form-control-inline input {
+    width: auto;
+    margin-right: 1rem;
+}
+
+.form-control-inline label {
+    line-height: 3rem;
+}
+
+button {
+    margin-top: 2rem;
 }

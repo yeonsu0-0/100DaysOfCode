@@ -1,0 +1,94 @@
+body {
+    background-color: #363472;  
+    font-family: 'Noto Sans KR', 'Roboto';
+    letter-spacing: -0.5px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+header h1 {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    margin-top: 4rem;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 1.5rem;
+}
+
+form {
+    width: 30rem;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 6px;
+}
+
+label{
+    /* margin-bottom: 0.5rem; */
+    display: block;
+    font-size: 1rem;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border: 1px solid #363472; 
+    padding: 0.5rem;
+    color: rgb(80, 80, 80);
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+background-color: #f2f2fd;  
+color: #363472;  
+}
+
+button {
+    display: block;
+
+    /* inherit: 브라우저 디폴트 값을 상속받는 값으로 변경할 수 있다 */
+    font: inherit;
+
+    background-color: #363472; 
+    color: white;
+    border: 1px solid #363472; 
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #403d84; 
+}
+
+.form-control-inline {
+    display: flex;
+}
+
+.form-control-inline input {
+    width: auto;
+    margin-right: 1rem;
+}
+
+.form-control-inline label {
+    line-height: 3rem;
+}
+
+button {
+    margin-top: 2rem;
+}

@@ -38,18 +38,31 @@ let adultYears = age - 18; // 미국 성인 나이 계산
 function calculateAdultYears() {
   adultYears = age - 18;
 
-  let realYears = age; //함수 내부에서 정의된 변수는 밖에서 사용할 수 없다!
+  // let realYears = age; //함수 내부에서 정의된 변수는 밖에서 사용할 수 없다!
 }
 
-age = 35;
+age = 27;
 calculateAdultYears();
 // alert(adultYears);
 
 //alert(realYears); //Uncaught ReferenceError: realYears is not defined
 
 // 값 반환
+// 함수를 호출해서 값을 얻을 수 있다
+// return을 사용하면 함수 내에서 변수에 값을 직접 저장하는 것보다 재사용에 용이해진다
 function returnAdultYears() {
   return age - 18;
 }
 
-returnAdultYears();
+let resultAdultYears = returnAdultYears();
+alert(resultAdultYears);
+
+// 매개변수
+// age를 매번 재정의 하지 않아도 된다
+
+function userAge(usersAge) {
+  return usersAge - 18;
+}
+
+console.log(userAge(30));
+console.log(userAge(24));

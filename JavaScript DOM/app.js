@@ -1,6 +1,6 @@
 
 // window object
-// console.log(window);
+console.log(window);
 
 /*
 alert();

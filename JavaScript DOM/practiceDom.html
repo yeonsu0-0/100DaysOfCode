@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practice DOM</title>
+    <style>
+        body {height: 3000px; background-color: rgb(241, 241, 241); border: 10px solid black; margin: 0;}
+    </style>
+    <!-- <script>
+        // 객체명.속성명으로 작성
+
+        // 📌 객체의 크기값 가져오기 (innerHeight와 outerHeight 비교)
+        // 1. innerHeight: 창의 세로폭(스크롤바, 제목 표시줄, border값 등 제외)
+        document.write('innerHeight: ' + window.innerHeight + '<br>');  //934
+
+        // 2. outerHeight: 창의 세로폭(스크롤바, 제목 표시줄, border값 등 포함)
+        document.write('outerHeight: ' + window.outerHeight + '<br>');  //1046
+
+
+        // 📌 open 메서드
+        // open(url, name, specs, replace);
+
+        window.open('http://google.com', '', 'width=300, height=300, true');
+
+        // 📌 close 메서드
+        // self: 현재 창을 선택하는 window 객체의 속성
+
+        var num = 5;
+
+        // 5초부터 1초 간격으로 줄어드는 숫자를 화면에 표시
+        setInterval(function(){ // 콜백 함수를 매개변수로 함
+            document.write('<h1>' + num + '</h1>');
+
+            num--;
+        },1000);
+
+        // 5초가 지나면 창이 닫힘
+        setTimeout(function(){
+            window.self.close();
+        },5001);
+
+    </script> -->
+</head>
+<body>
+
+    <!-- 📌 getElementById(): 태그의 id값으로 문자 객체를 선택 -->
+
+    <!-- <h1 id="text01">Title</h1>
+    <h3 id="text02">Sub Title</h3>
+    <h6 id="text03">contents</h6>
+
+    <script>
+
+        // 문서 객체 선택
+        var text01 = document.getElementById("text01");
+        var text02 = document.getElementById("text02");
+        var text03 = document.getElementById("text03");
+    </script> 
+    -->
+
+    <!-- 📌 getElementsByTagName(): 태그명으로 문서 객체를 선택, 복수인 배열로 선택 -->
+    <!-- 
+    <h1>제목태그</h1>
+    <h1>제목태그</h1>
+    <h1>제목태그</h1>
+
+    <script>
+        // 문서 객체 선택
+        var text = document.getElementsByTagName("h1");
+
+        // style: 문서 객체의 CSS 스타일 컨트롤 속성
+        // style.css속성명 = 값;
+        text[0].style.color = 'red'
+        text[1].style.color = 'green'
+        text[2].style.color = 'blue'
+    </script> -->
+
+
+    <!-- 📌 querySelector(): CSS 선택자, 문서 객체를 직접적으로 선택.
+            여러 요소가 한번에 선택될 때는 일치되는 첫번째 요소를 반환 -->
+
+    <div class="box">
+        <h1>제목태그</h1>
+        <h1>제목태그</h1>
+        <h1>제목태그</h1>
+    </div>
+    <h1>제목태그</h1>
+    <h1>제목태그</h1>
+
+    <script>
+        var text = document.querySelector('.box > h1');
+
+        text.style.color = 'red';
+    </script>
+
+        <!-- 📌 querySelectorAll(): CSS 선택자, 문서 객체를 직접적으로 선택.
+            요소가 여러 개일 수 있으므로 배열로 선택 -->
+        <script>    
+        var text2 = document.querySelectorAll('.box > h1');
+
+        text[0].style.color = 'red';
+        text[0].style.color = 'green';
+        text[0].style.color = 'blue';
+
+        </script>
+        <!-- 📌 준비 구문: window.onload = function()  -->
+        <!-- 문서 객체가 <script> 태그 밑에 있으면 인식(X) -> 준비 구문 쓰면 가능 -->
+
+
+        <!-- 문서 객체 생성 -->
+        <!-- 1️⃣ 문서 객체 생성 메서드: createElement('태그명')  -->
+
+        <!-- 정적 생성 -->
+        <h1>제목 태그1</h1>
+
+        <!-- 동적 생성 -->
+        <script>
+            var h2 = document.createElement('h2');
+            h2.innerHTML = '제목태그2';
+            document.body.appendChild(h2);
+        </script>
+
+        <!-- 2️⃣ 속성 컨트롤 메서드: getAttribute('속성명') / setAttribute('속성명', 값) -->
+        <script>
+            var img = document.createElement('img');
+
+            img.setAttribute('src', 'test.jpg');
+            img.setAttribute('width', 300);
+
+            document.body.appendChild(img);
+
+            var w = img.getAttribute('width');
+
+            alert(w);
+        </script>
+</body>
+</html>

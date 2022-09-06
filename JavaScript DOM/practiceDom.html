@@ -134,5 +134,21 @@
 
             alert(w);
         </script>
+
+        <!-- 3️⃣ 텍스트 컨트롤 속성 -->
+        <h1 id="h1Text01"></h1>
+        <h1 id="h1Text02"></h1>
+        <h1 id="h1Text03"></h1>
+
+        <script>
+            //1. 문서 객체 선택
+            var h1Text01 = document.getElementById('h1Text01');
+            var h1Text02 = document.getElementById('h1Text02');
+            var h1Text03 = document.getElementById('h1Text03');
+
+            h1Text01.innerHTML = '<a href="#">링크태그1</a>'; 
+            h1Text02.innerHTML = '<a href="#">링크태그2</a>'; 
+            h1Text03.innerHTML = '<a href="#">링크태그3</a>'; 
+        </script>
 </body>
 </html>

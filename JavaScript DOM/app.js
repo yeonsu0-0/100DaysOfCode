@@ -26,3 +26,42 @@ anchor.href = "http://naver.com";
 
 anchor = document.querySelector("p a");
 anchor.href = "http://google.com";
+
+
+
+
+// =================================================================
+
+// 📌 Add an element, HTML 새 요소 삽입
+
+// 1. Create the new element
+// 특정 이벤트가 발생했을 때 요소를 추가하고 싶은 경우
+let newAnchorElement = document.createElement('a');
+// 메모리에만 저장되어 있기 때문에 DOM에 요소를 저장하려면 2, 3단계까지 필요
+newAnchorElement.href = 'http://google.com';
+newAnchorElement.textContent = ' This link leads to Google!';
+
+// 2. Get access to the parent element that should hold the new element
+let firstParagraph = document.querySelector('p');
+// 페이지의 첫 번째 단락 선택
+
+// 3. Insert the new element into the parent element content
+firstParagraph.append(newAnchorElement);
+
+
+
+// 📌 Remove elements, HTML 요소 삭제
+
+// 1. Select the element that should be removed
+let firstH1Element = document.querySelector('h1');
+
+// 2. Remove it!
+firstH1Element.remove();
+// 옛날 브라우저에서도 작동: firstH1Element.parentElement.removeChild(firstH1Element);
+
+
+
+// 📌 Move elements, HTML 요소 이동
+
+// 1. 부모 요소 선택
+firstParagraph.parentElement.append(firstParagraph);

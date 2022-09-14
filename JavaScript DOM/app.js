@@ -63,5 +63,25 @@ firstH1Element.remove();
 
 // 📌 Move elements, HTML 요소 이동
 
-// 1. 부모 요소 선택
+// 부모 요소 선택 후 이동
 firstParagraph.parentElement.append(firstParagraph);
+
+
+
+// 📌 innerHTML 속성(textContet와 비슷)
+// 요소 안에 있는 모든 html 내용에 접근할 수 있게 해줌
+
+/*
+The easiest way to 'get the content of an element' is by using the innerHTML property.
+The innerHTML property is useful for getting or replacing the content of HTML elements.
+*/
+
+console.log(firstParagraph.innerHTML);
+
+firstParagraph.textContent = 'Hi, This is <strong>important<strong>'; // Hi, This is <strong>important<strong>
+// textContent 속성은 텍스트 속 태그를 DOM 요소로 해석하지 않는다
+
+
+firstParagraph.innerHTML = 'Hi, This is <strong>important<strong>'; // Hi, This is important
+// 태그가 HTML 요소로 분석된다
+
